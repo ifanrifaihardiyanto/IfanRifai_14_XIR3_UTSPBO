@@ -40,9 +40,9 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         etUsername = new javax.swing.JTextField();
-        etPassword = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        etPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -69,8 +69,6 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setBounds(60, 140, 100, 30);
         jPanel1.add(etUsername);
         etUsername.setBounds(160, 90, 160, 30);
-        jPanel1.add(etPassword);
-        etPassword.setBounds(160, 140, 160, 30);
 
         jButton1.setText("Sign in");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +87,8 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
         jButton2.setBounds(200, 200, 100, 30);
+        jPanel1.add(etPassword);
+        etPassword.setBounds(160, 140, 160, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 400, 300);
@@ -170,7 +170,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField etPassword;
+    private javax.swing.JPasswordField etPassword;
     private javax.swing.JTextField etUsername;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

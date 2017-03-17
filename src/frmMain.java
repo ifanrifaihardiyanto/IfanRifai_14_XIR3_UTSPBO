@@ -45,28 +45,28 @@ public class frmMain extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         etNama = new javax.swing.JTextField();
         etID = new javax.swing.JTextField();
         etStAwal = new javax.swing.JTextField();
         etStTujuan = new javax.swing.JTextField();
-        Tanggal = new com.toedter.calendar.JDateChooser();
-        jKereta = new javax.swing.JComboBox<>();
-        etWaktu = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb1Data = new javax.swing.JTable();
         BtnSave = new javax.swing.JButton();
         BtnClear = new javax.swing.JButton();
         BtnDelete = new javax.swing.JButton();
         BtnPrint = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        etHarga = new javax.swing.JTextField();
-        jDuduk = new javax.swing.JComboBox<>();
         BtnRefresh = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        Tanggal = new com.toedter.calendar.JDateChooser();
+        jLabel8 = new javax.swing.JLabel();
+        jKereta = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        etWaktu = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jDuduk = new javax.swing.JComboBox<>();
+        etHarga = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -109,21 +109,6 @@ public class frmMain extends javax.swing.JFrame {
         jLabel6.setText("Station Tujuan");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(40, 290, 130, 30);
-
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Tanggal Berangkat");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(420, 110, 130, 30);
-
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Jenis Kereta");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(420, 160, 130, 30);
-
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Waktu Berangkat");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(420, 210, 130, 30);
         getContentPane().add(etNama);
         etNama.setBounds(170, 140, 170, 30);
         getContentPane().add(etID);
@@ -138,14 +123,6 @@ public class frmMain extends javax.swing.JFrame {
         etStAwal.setBounds(170, 240, 170, 30);
         getContentPane().add(etStTujuan);
         etStTujuan.setBounds(170, 290, 170, 30);
-        getContentPane().add(Tanggal);
-        Tanggal.setBounds(550, 110, 170, 30);
-
-        jKereta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jKereta);
-        jKereta.setBounds(550, 160, 170, 30);
-        getContentPane().add(etWaktu);
-        etWaktu.setBounds(550, 210, 170, 30);
 
         tb1Data.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -199,22 +176,6 @@ public class frmMain extends javax.swing.JFrame {
         getContentPane().add(BtnPrint);
         BtnPrint.setBounds(480, 380, 110, 30);
 
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Tempat Duduk");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(420, 270, 130, 30);
-
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Harga");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(420, 320, 130, 30);
-        getContentPane().add(etHarga);
-        etHarga.setBounds(550, 320, 170, 30);
-
-        jDuduk.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerbong 1", "Gerbong 2", "Gerbong 3", "Gerbong 4", "Gerbong 5", "Gerbong 6" }));
-        getContentPane().add(jDuduk);
-        jDuduk.setBounds(550, 270, 170, 30);
-
         BtnRefresh.setText("REFRESH");
         BtnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,6 +187,46 @@ public class frmMain extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 255));
         jPanel3.setLayout(null);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Tanggal Berangkat");
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(360, 10, 130, 30);
+        jPanel3.add(Tanggal);
+        Tanggal.setBounds(490, 10, 170, 30);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Jenis Kereta");
+        jPanel3.add(jLabel8);
+        jLabel8.setBounds(360, 60, 130, 30);
+
+        jKereta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------ Bisnis ------", "Sawunggalih Utama", "Fajar Utama Yogya", "Senja Utama Yogya", "Mutiara Selatan", "Senja Utama Solo", "Sidomukti", "------ Eksekutif ------", "Argo Bromo Anggrek", "Argo Lawu", "Argo Dwipangga", "Argo Muria", "Argo Sindoro", "Argo Wilis", "Gajayana", "Sembrani", "Bima", "Taksaka", "Turangga", "Bangunkarta", "Purwojaya", "------ Ekonomi ------", "Bogowonto", "Krakatau", "Majapahit", "Menoreh", "Jayabaya", "Jaka Tingkir", "Joglokerto", "Ambarawa Ekspress", "Kalimaya", "Lokal Bandung Raya", "Kamandaka", "Kutojaya Utara", "Gaya Baru Malam", "Brantas", "Matarmaja", "Kertajaya", "Tawang Jaya", "Serayu", "Bengawan", "Kahuripan", "Kutojaya Selatan", "Pasundan", "Logawa", "Tawang Alun", "Penataran", "Rapih Dhoho" }));
+        jPanel3.add(jKereta);
+        jKereta.setBounds(490, 60, 300, 30);
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Waktu Berangkat");
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(360, 110, 130, 30);
+        jPanel3.add(etWaktu);
+        etWaktu.setBounds(490, 110, 170, 30);
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Tempat Duduk");
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(360, 160, 130, 30);
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Harga");
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(360, 210, 130, 30);
+
+        jDuduk.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerbong 1", "Gerbong 2", "Gerbong 3", "Gerbong 4", "Gerbong 5", "Gerbong 6" }));
+        jPanel3.add(jDuduk);
+        jDuduk.setBounds(490, 160, 170, 30);
+        jPanel3.add(etHarga);
+        etHarga.setBounds(490, 210, 170, 30);
+
         getContentPane().add(jPanel3);
         jPanel3.setBounds(0, 100, 800, 260);
 
@@ -263,6 +264,7 @@ public class frmMain extends javax.swing.JFrame {
         etID.setText("");
         etStAwal.setText("");
         etStTujuan.setText("");
+        Tanggal.setDateFormatString("");
         jKereta.setToolTipText("");
         etWaktu.setText("");
         jDuduk.setToolTipText("");
